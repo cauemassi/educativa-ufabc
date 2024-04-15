@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Motor::Admin => '/motor_admin'
+  resources :activities
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -8,4 +10,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: "main#index"
+
+  resources :dashboard, only: :index
 end

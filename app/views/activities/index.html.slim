@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Activities
+
+#activities
+  - @activities.each do |activity|
+    == render activity
+    p
+      = link_to "Show this activity", activity
+
+= link_to "New activity", new_activity_path

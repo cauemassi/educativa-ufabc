@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  theme: MyString
+  difficulty: MyString
+  question_quantity: MyString
+  is_public: false
+
+two:
+  user: two
+  theme: MyString
+  difficulty: MyString
+  question_quantity: MyString
+  is_public: false

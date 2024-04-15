@@ -17,17 +17,17 @@ gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire"s SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+# Hotwire"s modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'slim-rails', '~> 3.1', '>= 3.1.1'
-gem 'sass', '~> 3.4', '>= 3.4.22'
+gem "slim-rails", "~> 3.1", ">= 3.1.1"
+gem "sass", "~> 3.4", ">= 3.4.22"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ jruby ]
@@ -35,7 +35,14 @@ gem "tzinfo-data", platforms: %i[ jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem 'devise', '~> 4.9', '>= 4.9.4'
+gem "devise", "~> 4.9", ">= 4.9.4"
+
+gem "bootstrap", "~> 5.3", ">= 5.3.2"
+gem "sassc-rails"
+
+gem 'enumerize', '~> 2.8', '>= 2.8.1'
+
+gem 'motor-admin', '~> 0.4.26'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -61,3 +68,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "cssbundling-rails"
