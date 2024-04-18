@@ -6,5 +6,5 @@ class Activity < ApplicationRecord
 
   validates :user, presence: :true
 
-  enumerize :theme, in: [:math]
+  enumerize :theme
 end
