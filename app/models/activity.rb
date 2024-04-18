@@ -5,6 +5,4 @@ class Activity < ApplicationRecord
   has_many :questions
 
   validates :user, presence: :true
-
-  enumerize :theme
 end
