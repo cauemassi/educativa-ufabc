@@ -19,18 +19,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_043521) do
     t.string "theme"
     t.string "difficulty"
     t.string "question_quantity"
+    t.string "question_alternative_quantity"
     t.boolean "is_public"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_activities_on_user_id"
-  end
-
-  create_table "activity_questions", force: :cascade do |t|
-    t.string "theme"
-    t.string "statement"
-    t.string "alternatives"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "motor_alert_locks", force: :cascade do |t|
@@ -226,6 +219,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_043521) do
     t.index ["name"], name: "motor_tags_name_unique_index", unique: true
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "theme"
+    t.string "statement"
+    t.string "alternatives"
+    t.bigint "activity_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_questions_on_activity_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -244,4 +247,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_15_043521) do
   add_foreign_key "motor_note_tag_tags", "motor_note_tags", column: "tag_id"
   add_foreign_key "motor_note_tag_tags", "motor_notes", column: "note_id"
   add_foreign_key "motor_taggable_tags", "motor_tags", column: "tag_id"
+  add_foreign_key "questions", "activities"
 end

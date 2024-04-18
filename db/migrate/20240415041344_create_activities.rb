@@ -5,6 +5,7 @@ class CreateActivities < ActiveRecord::Migration[7.1]
       t.string :theme
       t.string :difficulty
       t.string :question_quantity
+      t.string :question_alternative_quantity
       t.boolean :is_public
 
       t.timestamps
